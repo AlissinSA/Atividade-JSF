@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <title>Cadastro de Usuários</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</h:head>
+<h:body>
+    <h:form>
+        <h:inputText id="nome" value="#{pessoaBean.nome}" />
+        <h:commandButton value="Cadastrar" action="#{pessoaBean.cadastrarNome}" />
+    </h:form>
+    <h2>Nomes cadastrados:</h2>
+    <ul>
+        <ui:repeat value="#{pessoaBean.nomesCadastrados}" var="nome">
+            <li>#{nome}</li>
+        </ui:repeat>
+    </ul>
+</h:body>
+</html>
