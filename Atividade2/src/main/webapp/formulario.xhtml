@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html">
+<head>
+    <title>Formulário</title>
+    <link rel="stylesheet" type="text/css" href="_css/main.css" />
+</head>
+<body>
+    <h:form>
+        <h:outputLabel for="nome" value="Nome:" />
+        <h:inputText id="nome" value="#{cadastroBean.nome}" styleClass="h-input-text" />
+
+        <h:outputLabel for="sobrenome" value="Sobrenome:" />
+        <h:inputText id="sobrenome" value="#{cadastroBean.sobrenome}" styleClass="h-input-text" />
+
+        <h:outputLabel for="telefone" value="Telefone:" />
+        <h:inputText id="telefone" value="#{cadastroBean.telefone}" styleClass="h-input-text" />
+
+        <h:outputLabel for="email" value="E-mail:" />
+        <h:inputText id="email" value="#{cadastroBean.email}" styleClass="h-input-text" />
+        
+        <h:commandButton value="Enviar" action="#{cadastroBean.enviar}" />
+    </h:form>
+</body>
+</html>
+
